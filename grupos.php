@@ -108,14 +108,14 @@ $grupo = $sentencia->fetchAll(PDO::FETCH_OBJ);
                 foreach ($grupo as $dato) {
                 ?>
                   <tr class="">
-                    <td scope="row"><?php echo $dato->idGrupos; ?></td>
+                    <td scope="row"><?php echo $dato->idGrupo; ?></td>
                     <td><?php echo $dato->idModulo; ?></td>
                     <td><?php echo $dato->idDocente; ?></td>
                     <td><?php echo $dato->FechaInicio; ?></td>
                     <td><?php echo $dato->NroEstudiantes; ?></td>
                     <td><?php echo $dato->Jornada; ?></td>
-                    <td><a href="editar.php?codigo=<?php echo $dato->codigo; ?>"><i class="text-success bi bi-pencil-square"></i></a></td>
-                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href=" eliminar.php?codigo=<?php echo $dato->codigo; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
+                    <td><a href="/cruddocentesbd/controllers/editargrupos.php?idGrupo=<?php echo $dato->idGrupo; ?>"><i class="text-success bi bi-pencil-square"></i></a></td>
+                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href="  /cruddocentesbd/controllers/eliminargrupos.php?idGrupo=<?php echo $dato->idGrupo; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
                   </tr>
                 <?php
                 }
@@ -131,7 +131,7 @@ $grupo = $sentencia->fetchAll(PDO::FETCH_OBJ);
       <div class="card">
         <div class="card-header">
           Ingresar datos:
-          <form class="p-4" method="POST" action="registrar.php">
+          <form class="p-4" method="POST" action="/cruddocentesbd/controllers/registrargrupos.php">
             <div class="mb-3">
               <label class="form-label">Id Modulo: </label>
               <input type="number" class="form-control" name="numIdModulo" autofocus required>
