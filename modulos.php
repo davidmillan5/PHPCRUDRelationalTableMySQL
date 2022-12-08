@@ -113,8 +113,8 @@ $modulo = $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <td><?php echo $dato->NombreModulo; ?></td>
                     <td><?php echo $dato->Creditos; ?></td>
                     <td><?php echo $dato->Precio; ?></td>
-                    <td><a href="editar.php?codigo=<?php echo $dato->codigo; ?>"><i class="text-success bi bi-pencil-square"></i></a></td>
-                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href=" eliminar.php?codigo=<?php echo $dato->codigo; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
+                    <td><a href="/cruddocentesbd/controllers/editarmodulos.php?idModulo=<?php echo $dato->idModulo; ?>"><i class=" text-success bi bi-pencil-square"></i></a></td>
+                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href="  /cruddocentesbd/controllers/eliminarmodulo.php?idModulo=<?php echo $dato->idModulo; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
                   </tr>
                 <?php
                 }
@@ -130,7 +130,7 @@ $modulo = $sentencia->fetchAll(PDO::FETCH_OBJ);
       <div class="card">
         <div class="card-header">
           Ingresar datos:
-          <form class="p-4" method="POST" action="registrar.php">
+          <form class="p-4" method="POST" action="/cruddocentesbd/controllers/registrarmodulos.php">
             <div class="mb-3">
               <label class="form-label">Programa: </label>
               <input type="text" class="form-control" name="txtPrograma" autofocus required>

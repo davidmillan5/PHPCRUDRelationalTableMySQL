@@ -23,12 +23,15 @@
     "apellido",
     "Apellidos",
     "correo",
+    "Creditos",
     "Direccion",
     "Docente",
     "docentes",
     "editado",
     "mensaje",
     "municipio",
+    "Precio",
+    "Programa",
     "resultado",
     "sentencia"
   ]
