@@ -3,7 +3,7 @@
 <?php
 
 if (!isset($_GET['idDocente'])) {
-  header('Location: ../cruddocentesbd/index.php?mensaje=error');
+  header('Location: ../index.php?mensaje=error');
   exit();
 }
 
@@ -23,7 +23,7 @@ $docente = $sentencia->fetch(PDO::FETCH_OBJ);
       <div class="card">
         <div class="card-header">
           Editar datos:
-          <form class="p-4" method="POST" action="/cruddocentesbd/controllers/editarProcesodocente.php">
+          <form class="p-4" method="POST" action="/cruddocentesbd/controllers/editarprocesodocente.php">
             <div class="mb-3">
               <label class="form-label">Apellidos: </label>
               <input type="text" class="form-control" name="txtApellido" required value="<?php echo $docente->Apellidos; ?>">
@@ -49,7 +49,7 @@ $docente = $sentencia->fetch(PDO::FETCH_OBJ);
               <input type="text" class="form-control" name="txtMunicipio" required value="<?php echo $docente->Municipio; ?>">
             </div>
             <div class="d-grid">
-              <input type="hidden" name="codigo" value="<?php echo $docente->idDocente; ?>">
+              <input type="hidden" name="idDocente" value="<?php echo $docente->idDocente; ?>">
               <input type="submit" class="btn btn-primary" value="Editar">
             </div>
           </form>

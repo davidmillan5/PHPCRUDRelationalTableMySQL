@@ -18,5 +18,18 @@
     "titleBar.inactiveBackground": "#74ee1599",
     "titleBar.inactiveForeground": "#15202b99"
   },
-  "peacock.color": "#74ee15"
+  "peacock.color": "#74ee15",
+  "cSpell.words": [
+    "apellido",
+    "Apellidos",
+    "correo",
+    "Direccion",
+    "Docente",
+    "docentes",
+    "editado",
+    "mensaje",
+    "municipio",
+    "resultado",
+    "sentencia"
+  ]
 }

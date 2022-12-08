@@ -2,9 +2,9 @@
 
 <?php
 include_once "model/connection.php";
-$sentencia = $bd->query("select * from docentes");
+$sentencia = $bd->query("select * from docentes.docentes");
 $docente = $sentencia->fetchAll(PDO::FETCH_OBJ);
-//print_r($persona);
+
 
 ?>
 
@@ -117,7 +117,7 @@ $docente = $sentencia->fetchAll(PDO::FETCH_OBJ);
                     <td><?php echo $dato->Celular; ?></td>
                     <td><?php echo $dato->Municipio; ?></td>
                     <td><a href="/cruddocentesbd/controllers/editardocentes.php?idDocente=<?php echo $dato->idDocente; ?>"><i class="text-success bi bi-pencil-square"></i></a></td>
-                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href=" eliminar.php?codigo=<?php echo $dato->codigo; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
+                    <td><a onclick="return confirm('¿Estas seguro de eliminar?');" href=" /cruddocentesbd/controllers/eliminardocente.php?idDocente=<?php echo $dato->idDocente; ?>"><i class="text-danger bi bi-trash3"></i></a></td>
                   </tr>
                 <?php
                 }
